@@ -22,4 +22,4 @@ df = pd.DataFrame([dic])
 res = loaded_model.predict(df)
 
 if st.button("Predict Final Exam Mark"):
-    st.write(f"Your Mark is : {res[0]:.2f}")
+    st.write(f"Your Mark is : {res[0]:.2f} out of 40")
