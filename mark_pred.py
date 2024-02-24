@@ -20,8 +20,8 @@ w = 1 if warn == 'Yes' else 0
 dic = {'Test 1':quiz1, 'Test 2':quiz2, 'Mid':mid,"Warning":w}
 df = pd.DataFrame([dic])
 res = loaded_model.predict(df)
-if res < 0:
-    res = 0
+if res[0] < 0:
+    res[0] = 0
 
 if st.button("Predict Final Exam Mark"):
     st.write(f"Your Mark is : {res[0]:.2f} out of 40")
